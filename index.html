@@ -7,18 +7,17 @@
     <title>
         Lumileds
     </title>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet">       
+    <link href="./src/output.css" rel="stylesheet">
+    <link href="./src/style.css" rel="stylesheet">  
 </head>
 
-<body class="relative bg-gray-900 text-gray-200">
+<body class="relative bg-colSec-1 text-color-colTxt">
     <header id="st-bar-header" class="text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="container flex items-end">
-                <!-- <img id="fixed-logo" class="h-12 object-contain" src="logos/lml256abw.png" /> -->
                 <svg version="1.1" id="svg-fixed-logo" width="205" height="296" viewBox="0 0 205.70103 297.01241"
                     xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
                     style="height: 3em;width: 2em;opacity: 0;transition: all 0.5s ease-in;">
@@ -42,9 +41,6 @@
                             id="path60" />
                     </g>
                 </svg>
-                <!-- <h1 id="fixed-name" class="text-3xl font-bold">
-                    Lumileds
-                </h1> -->
                 <svg version="1.1" id="svg-fixed-name" width="500" height="100" viewBox="0 0 501.70982 100.34203"
                     xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
                     style="height: 2em;width: 10em;margin-left: 1em;opacity: 0;transition: all 0.5s ease-in;">
@@ -91,14 +87,14 @@
             </div>
             <nav>
                 <!-- Hamburger Button -->
-                <button id="hamburger" class="lg:hidden p-2 text-white">
+                <button id="hamburger" class="lg:hidden p-2 text-color-main">
                     <span class="block w-6 h-0.5 bg-white mb-1"></span>
                     <span class="block w-6 h-0.5 bg-white mb-1"></span>
                     <span class="block w-6 h-0.5 bg-white"></span>
                 </button>
 
                 <!-- Navigation Menu -->
-                <ul id="nav-menu" class="flex space-x-4 hidden lg:flex">
+                <ul id="nav-menu" class="flex space-x-8 hidden lg:flex items-center">
                     <li><a class="hover:underline" href="#projects">Projects</a></li>
                     <li><a class="hover:underline" href="#estimation">Create Estimation</a></li>
                     <li><a class="hover:underline" href="#stats">Stats</a></li>
@@ -107,7 +103,7 @@
                 </ul>
 
                 <!-- Mobile Menu (hidden by default) -->
-                <ul id="mobile-menu" class="bg-gray-800 text-white p-6 hidden">
+                <ul id="mobile-menu" class="bg-sec-2 text-color-main p-6 hidden">
                     <li class="h-24 mt-24"><a class="hover:underline" href="#projects">> Projects</a></li>
                     <li class="h-24"><a class="hover:underline" href="#estimation">> Create Estimation</a></li>
                     <li class="h-24"><a class="hover:underline" href="#stats">> Stats</a></li>
@@ -117,7 +113,7 @@
             </nav>
         </div>
     </header>
-    <section class="bg-gray-950 text-white text-center py-20 flex items-center justify-center h-screen" id="hero">
+    <section class="py-20 flex items-center justify-center h-screen" id="hero">
         <video autoplay muted loop playsinline style="width: 100vw;height: 100vh;object-fit: cover;">
             <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                 type="video/mp4">
@@ -189,7 +185,7 @@
             </svg>
         </div>
     </section>
-    <section class="py-20" id="projects">
+    <section class="bg-colSec-2 py-20" id="projects">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12">
                 Our Projects
@@ -197,7 +193,7 @@
 
         </div>
     </section>
-    <section class="bg-gray-950 py-20" id="estimation">
+    <section class="bg-colSec-1 text-white py-20" id="estimation">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8">
                 Create Your Estimation
@@ -206,19 +202,19 @@
                 Get a personalized estimation for your solar panel installation.
             </p>
             <button
-                class="bg-yellow-600 text-white px-6 py-3 rounded-full font-bold hover:bg-yellow-700 transition duration-300">
+                class="bg-primary-color text-color-colTxt px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition duration-300">
                 Start Now
             </button>
         </div>
     </section>
-    <section class="py-20" id="stats">
+    <section class="bg-colSec-2 py-20" id="stats">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-12">
                 Our Impact
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <div data-index="0" , class="box bg-gray-900 md:bg-gray-950 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-solar-panel text-4xl text-yellow-500 mb-4">
+                <div data-index="0" , class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-solar-panel text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
                         Energy Provided
@@ -227,8 +223,8 @@
                         10,000 MWh
                     </p>
                 </div>
-                <div data-index="1" class="box bg-gray-900 md:bg-gray-950 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-tree text-4xl text-yellow-500 mb-4">
+                <div data-index="1" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-tree text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
                         Trees Saved
@@ -237,8 +233,8 @@
                         50,000 Trees
                     </p>
                 </div>
-                <div data-index="2" class="box bg-gray-900 md:bg-gray-950 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-globe text-4xl text-yellow-500 mb-4">
+                <div data-index="2" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-globe text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
                         CO2 Reduced
@@ -247,8 +243,8 @@
                         25,000 Tons
                     </p>
                 </div>
-                <div data-index="3" class="box bg-gray-900 md:bg-gray-950 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-bolt text-4xl text-yellow-500 mb-4">
+                <div data-index="3" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-bolt text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
                         Homes Powered
@@ -260,34 +256,34 @@
             </div>
         </div>
     </section>
-    <section class="bg-gray-950 py-20" id="brands">
+    <section class="bg-colSec-1 text-white py-20" id="brands">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12">
                 Our Brands
             </h2>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 bg-gray-950">
-                <div data-index="0" class="box md:bg-gray-800 sm:bg-gray-950 p-4 rounded-lg shadow-lg">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 bg-colSec-1">
+                <div data-index="0" class="box md:bg-accSec-1 sm:bg-colSec-1 p-4 md:rounded-lg md:shadow-lg">
                     <img alt="Logo of Inverter Brand 1" class="w-full h-24 object-contain" src="logos/huawei.svg" />
                 </div>
-                <div data-index="1" class="box md:bg-gray-800 sm:bg-gray-950 p-4 rounded-lg shadow-lg">
+                <div data-index="1" class="box md:bg-accSec-1 sm:bg-colSec-1 p-4 md:rounded-lg md:shadow-lg">
                     <img alt="Logo of Inverter Brand 2" class="w-full h-24 object-contain" src="logos/solis.svg" />
                 </div>
-                <div data-index="2" class="box md:bg-gray-800 sm:bg-gray-950 p-4 rounded-lg shadow-lg">
+                <div data-index="2" class="box md:bg-accSec-1 sm:bg-colSec-1 p-4 md:rounded-lg md:shadow-lg">
                     <img alt="Logo of Inverter Brand 3" class="w-full h-24 object-contain" src="logos/sungrow.svg" />
                 </div>
-                <div data-index="3" class="box md:bg-gray-800 sm:bg-gray-950 p-4 rounded-lg shadow-lg">
+                <div data-index="3" class="box md:bg-accSec-1 sm:bg-colSec-1 p-4 md:rounded-lg md:shadow-lg">
                     <img alt="Logo of Solar Panel Brand 1" class="w-full h-24 object-contain" src="logos/fronius.svg" />
                 </div>
-                <div data-index="4" class="box md:bg-gray-800 sm:bg-gray-950 p-4 rounded-lg shadow-lg">
+                <div data-index="4" class="box md:bg-accSec-1 sm:bg-colSec-1 p-4 md:rounded-lg md:shadow-lg">
                     <img alt="Logo of Solar Panel Brand 2" class="w-full h-24 object-contain" src="logos/sma.svg" />
                 </div>
-                <div data-index="5" class="box md:bg-gray-800 sm:bg-gray-950 p-4 rounded-lg shadow-lg">
+                <div data-index="5" class="box md:bg-accSec-1 sm:bg-colSec-1 p-4 md:rounded-lg md:shadow-lg">
                     <img alt="Logo of Solar Panel Brand 3" class="w-full h-24 object-contain" src="logos/jasolar.svg" />
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-20" id="contact">
+    <section class="bg-colSec-2 py-20" id="contact">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8">
                 Contact Us
@@ -295,35 +291,35 @@
             <p class="text-xl mb-8">
                 We'd love to hear from you! Reach out to us for any inquiries or support.
             </p>
-            <form class="max-w-lg mx-auto bg-gray-950 p-8 rounded-lg shadow-lg fade-in">
+            <form class="max-w-lg mx-auto bg-colSec-3 p-8 rounded-lg shadow-lg fade-in">
                 <div class="mb-4">
-                    <label class="block text-left text-gray-200" for="name">
+                    <label class="block text-left text-color-colTxt" for="name">
                         Nombre
                     </label>
-                    <input class="bg-gray-800 w-full px-4 py-2 rounded-lg focus:outline-none" id="name" type="text" />
+                    <input class="bg-colSec-2 w-full px-4 py-2 rounded-lg focus:outline-none" id="name" type="text" />
                 </div>
                 <div class="mb-4">
-                    <label class="block text-left text-gray-200" for="email">
+                    <label class="block text-left text-color-colTxt" for="email">
                         Email
                     </label>
-                    <input class="bg-gray-800 w-full px-4 py-2 rounded-lg focus:outline-none" id="email" type="email" />
+                    <input class="bg-colSec-2 w-full px-4 py-2 rounded-lg focus:outline-none" id="email" type="email" />
                 </div>
                 <div class="mb-4">
-                    <label class="block text-left text-gray-200" for="message">
+                    <label class="block text-left text-color-colTxt" for="message">
                         Mensaje
                     </label>
-                    <textarea class="bg-gray-800 w-full px-4 py-2 rounded-lg focus:outline-none"
+                    <textarea class="bg-colSec-2 w-full px-4 py-2 rounded-lg focus:outline-none"
                         id="message"></textarea>
                 </div>
                 <button
-                    class="bg-yellow-600 text-white px-6 py-3 rounded-full font-bold hover:bg-yellow-700 transition duration-300"
+                    class="bg-primary-color text-colTxt px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition duration-300"
                     type="submit">
                     Enviar mensaje
                 </button>
             </form>
         </div>
     </section>
-    <footer class="bg-gray-800 text-white text-center py-4">
+    <footer class="bg-colSec-1 text-white text-center py-4">
         <p>
             © 2025 Lumileds. All rights reserved.
         </p>
