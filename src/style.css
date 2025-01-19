@@ -5,7 +5,7 @@ body {
 }
 
 #st-bar-header {
-    background-color: rgba(16, 22, 36, 0.5);
+    background-color: rgba(27, 27, 30, 0.5);
     border-bottom: 2px solid #E5E7EB;
     position: fixed;
     width: 100vw;
@@ -61,7 +61,7 @@ body {
     top: 0;
     left: 0;
 
-    background-image: linear-gradient(to right, #1f2937, #030712);
+    /* background-image: linear-gradient(to right, #1f2937, #030712); */
     opacity: 1;
     z-index: 101;
     /* transform: translateX(-100%); */
