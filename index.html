@@ -11,13 +11,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         :root {
             --primary-color: #F9BA2D;
             --secondary-color: #989C99;
             --accent-color: #090302;
         }
 
-        .st-bar-header {
+        #st-bar-header {
             /* background-color: rgb(16, 22, 36); */
             background-color: rgba(16, 22, 36, 0.5) !important;
             border-bottom: 2px solid #E5E7EB;
@@ -25,7 +29,7 @@
             width: 100vw;
             top: 0;
             left: 0;
-            z-index: 95;
+            z-index: 115;
             /* opacity: 0.2; */
         }
 
@@ -44,10 +48,6 @@
 
         #hamburger span {
             transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .main-screen {
-            height: 100%;
         }
 
         body {
@@ -122,15 +122,18 @@
 
         #mobile-menu {
             position: absolute;
+            width: 100vw;
+            height: 100vh;
             top: 0;
             left: 0;
+
             background-image: linear-gradient(to right, #1f2937, #030712);
-            opacity: 0.9;
-            z-index: 10;
+            opacity: 1;
+            z-index: 101;
             /* transform: translateX(-100%); */
             /* Start off-screen */
             /* transition: transform 0.3s ease-out; */
-            transition: all 0.3s ease-in-out;
+            /* transition: all 0.3s ease-in-out; */
             /* For smooth transition */
         }
 
@@ -147,7 +150,7 @@
         #hamburger {
             position: relative;
             /* Make it a positioned element */
-            z-index: 100;
+            z-index: 115;
             /* Higher z-index to keep the button on top */
         }
 
@@ -195,7 +198,7 @@
 </head>
 
 <body class="relative bg-gray-900 text-gray-200">
-    <header class="bg-gray-950 st-bar-header text-white p-4">
+    <header id="st-bar-header" class="bg-gray-950 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="container flex items-end">
                 <!-- <img id="fixed-logo" class="h-12 object-contain" src="logos/lml256abw.png" /> -->
@@ -287,7 +290,7 @@
                 </ul>
 
                 <!-- Mobile Menu (hidden by default) -->
-                <ul id="mobile-menu" class="w-full h-full bg-gray-800 text-white p-6 hidden">
+                <ul id="mobile-menu" class="bg-gray-800 text-white p-6 hidden">
                     <li class="h-24 mt-24"><a class="hover:underline" href="#projects">> Projects</a></li>
                     <li class="h-24"><a class="hover:underline" href="#estimation">> Create Estimation</a></li>
                     <li class="h-24"><a class="hover:underline" href="#stats">> Stats</a></li>
@@ -621,7 +624,7 @@
         const scrollY = window.scrollY;
         console.log(scrollY);
         // scrollY <= targetScroll
-        if (scrollY <= targetScroll + 100) {
+        if (scrollY / targetScroll <= 1.1) {
             // Calculate interpolation between start and end
             const progress = Math.min(scrollY / targetScroll, 1.0);
             
@@ -643,8 +646,10 @@
         } else {
             targetLogo.style.opacity = 1;
             targetName.style.opacity = 1;
-            svgName.style.opacity = 0;
-            svgLogo.style.opacity = 0;
+            document.getElementById("sticky-logo").style.display = "none";
+            document.getElementById("st-bar-header").style.backgroundColor = "rgb(16, 22, 36);";
+            // svgName.style.opacity = 0;
+            // svgLogo.style.opacity = 0;
         }
     });
 
