@@ -25,7 +25,7 @@ let initPosName = {
 let endPosName = targetName.getBoundingClientRect();
 
 const targetScroll = window.innerHeight / 2;
-var statusCenter = false;
+let statusCenter = false;
 let progress = 0.0;
 
 function interpolateRect(startRect, endRect, progress) {
@@ -53,6 +53,15 @@ function setTransformations() {
     svgName.style.height = `${rectName.height}px`;
 }
 
+function distanceLeft() {
+    const posLogo = svgLogo.getBoundingClientRect();
+    const diff_top = posLogo.top - endPosLogo.top;
+    const diff_left = posLogo.left - endPosLogo.left;
+    const diff_width = posLogo.width - endPosLogo.width;
+    const diff_height = posLogo.height - endPosLogo.height;
+    return Math.abs(diff_top) + Math.abs(diff_left) + Math.abs(diff_width) + Math.abs(diff_height);
+}
+
 window.addEventListener('resize', () => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
@@ -75,19 +84,17 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    // console.log(scrollY, statusCenter)
+    // console.log(scrollY);
     if (!statusCenter) {
-        if (scrollY / targetScroll <= 1.1) {
-            // Calculate interpolation between start and end
-            progress = Math.min(scrollY / targetScroll, 1.0);
-
-            setTransformations();
-        } else {
+        if (distanceLeft() < 5 || scrollY > 2*targetScroll) {
             targetLogo.style.opacity = 1;
             targetName.style.opacity = 1;
             document.getElementById("sticky-logo").style.display = "none";
             document.getElementById("st-bar-header").style.backgroundColor = "rgb(27, 27, 30)";
             statusCenter = true;
+        } else {
+            progress = Math.min(scrollY / targetScroll, 1.0);
+            setTransformations();
         }
     } else {
         if (scrollY / targetScroll < 1.1 && document.getElementById("sticky-logo").style.display == "none") {
@@ -96,6 +103,8 @@ window.addEventListener('scroll', () => {
             targetLogo.style.opacity = 0;
             targetName.style.opacity = 0;
             statusCenter = false;
+            progress = 0.97;
+            setTransformations();
         }
     }
 });
