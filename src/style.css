@@ -204,7 +204,7 @@ body {
     background-repeat: none;
     background-size: cover;
 
-    
+
     h2 {
         /* background-color: #ff0000; */
         position: absolute;
@@ -215,6 +215,7 @@ body {
         transform: translate(-50%);
         z-index: 102;
     }
+
     p {
         position: absolute;
         /* background-color: white; */
@@ -224,6 +225,7 @@ body {
         top: calc(var(--fsize) + var(--offset) + 0rem);
         z-index: 102;
     }
+
     @media (min-width: 640px) {
         p {
             width: 30vw;
@@ -231,21 +233,56 @@ body {
         }
     }
 }
+
 .gradient {
     width: 100vw;
     height: 20vh;
     position: absolute;
     z-index: 80;
 }
+
 .bottom {
     bottom: 0;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0) 10%, #1b1b1e);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #1b1b1e);
 }
+
 .top {
     top: 0;
     /* height: 40vw; */
-    background-image: linear-gradient(0deg, rgba(0,0,0,0), #1b1b1e 50%);
-    
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #1b1b1e 50%);
+
+}
+
+.tooltip {
+    position: absolute;
+    width: max-content;
+    top: 100%;
+    /* Initially hidden above the container */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.6em 1em;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 3rem;
+    background: #e0e0e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    /* opacity: 1;
+    visibility: visible; */
+}
+
+/* Triangle arrow for the bubble tooltip */
+.tooltip::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    border-style: solid;
+    border-width: 0 8px 8px;
+    border-color: transparent transparent #e0e0e2;
 }
 
 
