@@ -51,6 +51,16 @@ function validateEmail(email) {
     return true; // Email is valid
 }
 
+function validatePhoneNumber(phoneNumber) {
+    // Check if the input is exactly 10 digits
+    const phoneRegex = /^\d{10}$/;
+    if (phoneRegex.test(phoneNumber)) {
+        return true; // Valid phone number
+    } else {
+        throw new Error("Numero de telefono no valido.");
+    }
+}
+
 function validateString(input, min_length) {
     if (input.trim() === "") {
         throw new Error("Favor de rellenar todos los campos.");
@@ -74,12 +84,10 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
     // Convert FormData to JSON
     const data = Object.fromEntries(formData.entries());
-    console.log(data.name);
-
-    
 
     try {
         validateString(data.name, 3);
+        validatePhoneNumber(data.tel);
         validateEmail(data.email);
         validateString(data.message, 10);
         // const response = await fetch(form.action, {
