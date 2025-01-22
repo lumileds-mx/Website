@@ -9,7 +9,7 @@ module.exports = {
         "colSec-3": "#e0e0e2",
         'accSec-1': '#37373D',
         "colTxt": "#000000",
-        "primary-color": "#fa9f42",
+        "primary-color": "#f9af08",
         "secondary-color": "#969494",
       },
     },

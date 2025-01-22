@@ -154,6 +154,101 @@ body {
     stroke-opacity: 1;
 }
 
+.fb-icon {
+    /* background-color: #3b5998; */
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border-radius: 100%;
+    }
+
+    &:active {
+        scale: 0.85;
+    }
+}
+
+.ig-icon {
+    /* background-color: #bc2a8d; */
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border-radius: 100%;
+    }
+
+    &:active {
+        scale: 0.85;
+    }
+}
+
+.ws-icon {
+    /* background-color: #25d366; */
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border-radius: 100%;
+    }
+
+    &:active {
+        scale: 0.85;
+    }
+}
+
+#projects {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    --offset: 7rem;
+    --fsize: 2rem;
+    background-image: url("https://group.met.com/media/mjmlu0xi/solar-energy.jpg?anchor=center&mode=crop&width=1000&rnd=133269055835230000&mode=max&upscale=false");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+
+    
+    h2 {
+        /* background-color: #ff0000; */
+        position: absolute;
+        width: fit-content;
+        left: 50vw;
+        top: var(--offset);
+        font-size: var(--fsize);
+        transform: translate(-50%);
+        z-index: 102;
+    }
+    p {
+        position: absolute;
+        /* background-color: white; */
+        height: 0.2rem;
+        width: 50vw;
+        left: 25vw;
+        top: calc(var(--fsize) + var(--offset) + 0rem);
+        z-index: 102;
+    }
+    @media (min-width: 640px) {
+        p {
+            width: 30vw;
+            left: 35vw;
+        }
+    }
+}
+.gradient {
+    width: 100vw;
+    height: 20vh;
+    position: absolute;
+    z-index: 80;
+}
+.bottom {
+    bottom: 0;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0) 10%, #1b1b1e);
+}
+.top {
+    top: 0;
+    /* height: 40vw; */
+    background-image: linear-gradient(0deg, rgba(0,0,0,0), #1b1b1e 50%);
+    
+}
+
+
 @keyframes pop-in {
     0% {
         transform: scale(0);
