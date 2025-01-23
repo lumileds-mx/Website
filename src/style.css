@@ -241,8 +241,8 @@ body {
         height: 100vh;
         /* z-index: 90; */
         object-fit: cover;
-        /* object-position: center; Initial position */
-        transition: all 300ms ease-out;
+        object-position: center;
+        transition: all 500ms ease-in-out;
     }
 }
 
@@ -266,15 +266,17 @@ body {
 }
 
 #project-desc {
-    background-color: #989C99;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #1b1b1e);
     position: absolute;
     width: max-content;
     height: max-content;
     bottom: 0;
     right: 0;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
     z-index: 102;
+    text-align: right;
+    color: white;
 }
 
 .tooltip {
@@ -316,12 +318,12 @@ body {
 
 @keyframes camera-move-2 {
     0% { object-position: 50% 50%; }
-    100% { object-position: 45% 60%; }
+    100% { object-position: 35% 60%; }
 }
 
 @keyframes camera-move-3 {
     0% { object-position: 50% 50%; }
-    100% { object-position: 65% 50%; }
+    100% { object-position: 70% 50%; }
 }
 
 
