@@ -9,7 +9,7 @@ const animations = ['camera-move-1', 'camera-move-2', 'camera-move-3'];
 function assignRandomAnimation(img) {
     const randomIndex = Math.floor(Math.random() * animations.length);
     const animationName = animations[randomIndex];
-    console.log(animationName);
+    // console.log(animationName);
     img.style.animation = `${animationName} 5s ease-in-out alternate infinite`;
 }
 
