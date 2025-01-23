@@ -1,0 +1,38 @@
+[
+    {
+        "folder": "AgricolaPrime",
+        "files": ["0001.jpg", "0002.jpg", "0003.jpg", "0004.mp4"]
+    },
+    {
+        "folder": "AvicolaAldrete",
+        "files": ["0001.mp4", "0002.mp4"]
+    },
+    {
+        "folder": "CVA",
+        "files": ["0001.jpg"]
+    },
+    {
+        "folder": "GasolineraLizarde",
+        "files": ["0001.jpg", "0002.jpg"]
+    },
+    {
+        "folder": "GoFitYahualica",
+        "files": ["0001.jpg"]
+    },
+    {
+        "folder": "House01",
+        "files": ["0001.jpg", "0002.jpg"]
+    },
+    {
+        "folder": "PuntoGanaBar",
+        "files": ["0001.jpg"]
+    },
+    {
+        "folder": "SMC",
+        "files": ["0001.jpg", "0002.mp4", "0003.mp4"]
+    },
+    {
+        "folder": "TempladoraTepglass",
+        "files": ["0001.mp4"]
+    }
+]

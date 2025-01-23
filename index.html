@@ -82,28 +82,43 @@
 
                 <!-- Navigation Menu -->
                 <ul id="nav-menu" class="flex space-x-8 hidden lg:flex items-center">
-                    <li><a class="hover:underline" href="#projects">Projects</a></li>
-                    <li><a class="hover:underline" href="#estimation">Create Estimation</a></li>
-                    <li><a class="hover:underline" href="#stats">Stats</a></li>
-                    <li><a class="hover:underline" href="#brands">Brands</a></li>
-                    <li><a class="hover:underline" href="#contact">Contact</a></li>
+                    <li><a class="hover:underline" href="#projects">Conocenos</a></li>
+                    <li><a class="hover:underline" href="#estimation">Cotiza</a></li>
+                    <li><a class="hover:underline" href="#stats">Impacto</a></li>
+                    <li><a class="hover:underline" href="#brands">Marcas</a></li>
+                    <li><a class="hover:underline" href="#contact">Contacto</a></li>
                 </ul>
 
                 <!-- Mobile Menu (hidden by default) -->
                 <ul id="mobile-menu" class="bg-colSec-1 text-white p-6 hidden">
-                    <li class="h-24 mt-24"><a class="hover:underline" href="#projects">> Projects</a></li>
-                    <li class="h-24"><a class="hover:underline" href="#estimation">> Create Estimation</a></li>
-                    <li class="h-24"><a class="hover:underline" href="#stats">> Stats</a></li>
-                    <li class="h-24"><a class="hover:underline" href="#brands">> Brands</a></li>
-                    <li class="h-24"><a class="hover:underline" href="#contact">> Contact</a></li>
+                    <li class="h-24 mt-24">
+                        <p class="fas fa-chevron-right text-gray-500"></p>
+                        <a class="hover:underline font-bold text-lg" href="#projects">Conocenos</a>
+                    </li>
+                    <li class="h-24">
+                        <p class="fas fa-chevron-right text-gray-500"></p>
+                        <a class="hover:underline font-bold text-lg" href="#estimation">Cotiza</a>
+                    </li>
+                    <li class="h-24">
+                        <p class="fas fa-chevron-right text-gray-500"></p>
+                        <a class="hover:underline font-bold text-lg" href="#stats">Impacto</a>
+                    </li>
+                    <li class="h-24">
+                        <p class="fas fa-chevron-right text-gray-500"></p>
+                        <a class="hover:underline font-bold text-lg" href="#brands">Marcas</a>
+                    </li>
+                    <li class="h-24">
+                        <p class="fas fa-chevron-right text-gray-500"></p>
+                        <a class="hover:underline font-bold text-lg" href="#contact">Contacto</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- Main section -->
     <section class="py-20 flex relative items-center justify-center h-screen" id="hero">
         <video autoplay muted loop playsinline style="width: 100vw;height: 100vh;object-fit: cover;">
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                type="video/mp4">
+            <source src="./static/main_sequence.mp4" type="video/mp4">
         </video>
         <div id="sticky-logo">
             <svg version="1.1" id="svg-logo" width="205" height="296" viewBox="0 0 205.70103 297.01241"
@@ -158,83 +173,217 @@
                 </g>
             </svg>
         </div>
-        <div class="gradient bottom"></div>
+        <!-- <div class="gradient bottom-0" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #e0e0e2);"></div> -->
     </section>
-    <section class="bg-black py-4" id="projects">
-        <h2 class="text-3xl text-white font-bold text-center mb-12">
-            Conocenos
-        </h2>
-        <!-- <p class="bg-secondary-color"></p> -->
-        <div class="gradient bottom"></div>
-        <div class="gradient top"></div>
-    </section>
-    <section class="bg-colSec-1 text-white py-20" id="estimation">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">
-                Create Your Estimation
-            </h2>
-            <p class="text-xl mb-8">
-                Get a personalized estimation for your solar panel installation.
-            </p>
-            <button
-                class="bg-primary-color text-color-colTxt px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition duration-300">
-                Start Now
-            </button>
+    <!-- Res and Comm -->
+    <section class="bg-colSec-3 pt-20 pb-6" id="solar-systems">
+        <div class="container mx-auto px-4">
+            <!-- Section Heading -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold mb-4">
+                    Sistemas solares fotovoltaicos para cada necesidad
+                </h1>
+                <p class="text-lg">
+                    Diseñamos e instalamos soluciones solares tanto para propiedades residenciales como comerciales, asegurando la máxima eficiencia y sostenibilidad.
+                </p>
+            </div>
+    
+            <!-- Split Layout -->
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <!-- Residential System -->
+                <div class="lg:w-1/2 w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[40dvh] lg:h-[50dvh]">
+                        <img src="./static/projects/House01/0001.jpg" alt="Residential Solar PV System"
+                            class="w-full h-full object-cover obje" />
+                        <div class="absolute top-0 left-0 right-0 bg-black bg-opacity-30 flex flex-row items-center justify-center">
+                            <!-- <img src="./static/residential.png" alt="Residential Solar PV System icon"
+                            class="w-1/5 opacity-100" /> -->
+                            <h2 class="text-3xl font-bold text-white py-4">Sistemas residenciales</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-lg mb-4">
+                            Soluciones solares a medida para hogares, diseñadas para reducir las facturas de energía y aumentar la independencia energética.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Diseño de sistema personalizado</li>
+                            <li>Integración perfecta con su hogar</li>
+                            <li>Monitoreo y soporte 24 horas al día, 7 días a la semana</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Commercial System -->
+                <div class="lg:w-1/2 w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[40dvh] lg:h-[50dvh]">
+                        <img src="./static/projects/SMC/0001.jpg" alt="Commercial Solar PV System"
+                            class="w-full h-full object-cover" />
+                        <div class="absolute top-0 left-0 right-0 bg-black bg-opacity-30 flex flex-row items-center justify-center">
+                            <!-- <img src="./static/commercial.png" alt="Residential Solar PV System icon"
+                            class="w-1/5 opacity-100" /> -->
+                            <h2 class="text-3xl font-bold text-white py-4">Sistemas Comerciales</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-lg mb-4">
+                            Soluciones solares escalables para empresas, que le ayudan a reducir los costes operativos y alcanzar objetivos de sostenibilidad.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Paneles de alta eficiencia</li>
+                            <li>Inversores de alto rendimiento</li>
+                            <li>Gestión de proyectos dedicada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="bg-colSec-2 py-20" id="stats">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12">
-                Our Impact
-            </h2>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <div data-index="0" , class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-solar-panel text-4xl text-primary-color mb-4">
-                    </i>
-                    <h3 class="text-2xl font-bold">
-                        Energy Provided
-                    </h3>
-                    <p class="text-xl mt-2">
-                        10,000 MWh
+    <!-- 24/7 monitor -->
+    <section class="bg-colSec-3 pb-20" id="monitor">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 px-6">
+                    <h1 class="text-4xl font-bold mb-4">
+                        Monitoreo 24/7,
+                        <br />
+                        Máximo control
+                    </h1>
+                    <p class="text-lg mb-8">
+                        Mantenga el control total de su sistema de energía solar en todo momento. Con herramientas de monitoreo avanzadas, podrá supervisar y gestionar su sistema de manera eficiente, asegurando un rendimiento óptimo y una máxima tranquilidad.
                     </p>
                 </div>
-                <div data-index="1" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-tree text-4xl text-primary-color mb-4">
-                    </i>
-                    <h3 class="text-2xl font-bold">
-                        Trees Saved
-                    </h3>
-                    <p class="text-xl mt-2">
-                        50,000 Trees
+                <div class="relative w-3/4 lg:w-1/2 h-[60dvw] md:h-[55dvw] lg:h-[35dvw] flex justify-center overflow-hidden lg:mx-24 cursor-pointer"
+                    id="image-carousel">
+                    <img alt="Slide 1" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-100"
+                        src="./static/mock_huawei.png" />
+                    <img alt="Slide 2" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-0"
+                        src="./static/mock_sma.png" />
+                    <img alt="Slide 3" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-0"
+                        src="./static/mock_sungrow.png" />
+                    <img alt="Slide 4" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-0"
+                        src="./static/mock_growatt.png" />
+                    <img alt="Slide 5" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-0"
+                        src="./static/mock_solis.png" />
+                    <img alt="Slide 6" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-0"
+                        src="./static/mock_fronius.png" />
+                    <div class="absolute w-full bottom-0 h-1/5 z-200"
+                        style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), #e0e0e2);"></div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between mt-16">
+                <div class="lg:w-1/3 mb-8 lg:mb-0 px-6">
+                    <h2 class="text-xl font-bold mb-4">
+                        Acceso remoto y en tiempo real
+                    </h2>
+                    <p>
+                        Controle y supervise su sistema desde cualquier lugar, en cualquier momento, a través de una aplicación móvil.
                     </p>
                 </div>
-                <div data-index="2" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-globe text-4xl text-primary-color mb-4">
-                    </i>
-                    <h3 class="text-2xl font-bold">
-                        CO2 Reduced
-                    </h3>
-                    <p class="text-xl mt-2">
-                        25,000 Tons
+                <div class="lg:w-1/3 mb-8 lg:mb-0 px-6">
+                    <h2 class="text-xl font-bold mb-4">
+                        Monitorear el flujo de energía
+                    </h2>
+                    <p>
+                        Vea cuánta energía genera su sistema, cómo se utiliza y cuánto le ayuda ahorrar.
                     </p>
                 </div>
-                <div data-index="3" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
-                    <i class="fas fa-bolt text-4xl text-primary-color mb-4">
-                    </i>
-                    <h3 class="text-2xl font-bold">
-                        Homes Powered
-                    </h3>
-                    <p class="text-xl mt-2">
-                        5,000 Homes
+                <div class="lg:w-1/3 px-6">
+                    <h2 class="text-xl font-bold mb-4">
+                        Reciba alertas urgentes
+                    </h2>
+                    <p>
+                        Reciba actualizaciones sobre el estado de su sistema y reciba alertas sobre cortes de red o condiciones climáticas adversas.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Projects -->
+    <section class="bg-black py-4" id="projects">
+        <!-- <h2 class="text-3xl text-white font-bold text-center mb-12 bg-black bg-opacity-30">
+            Conocenos
+        </h2> -->
+        <!-- <p class="bg-secondary-color"></p> -->
+        <!-- <div class="gradient bottom"></div>
+        <div class="gradient top"></div> -->
+        <div id="project-desc"></div>
+        <img id="project-img" class="" src="" alt="" draggable="false">
+        <video id="project-vid" class="hidden" autoplay muted draggable="false">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <!-- Create an estimation -->
+    <section class="bg-colSec-1 text-white py-20" id="estimation">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">
+                Cotiza con nosotros
+            </h2>
+            <p class="text-xl mb-8">
+                Obtenga una cotizacion personalizada para la instalación de sus paneles solares.
+            </p>
+            <button onclick="window.location.href='#contact'"
+                class="bg-primary-color text-color-colTxt px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition duration-300">
+                Empieze ahora
+            </button>
+        </div>
+    </section>
+    <!-- Our contribution to the world -->
+    <section class="bg-colSec-3 py-20" id="stats">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">
+                Nuestro impacto
+            </h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div data-index="0" , class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-solar-panel text-4xl text-primary-color mb-4">
+                    </i>
+                    <h3 class="text-2xl font-bold">
+                        Energía suministrada
+                    </h3>
+                    <p class="text-xl mt-2">
+                        ~5.000 GWh
+                    </p>
+                </div>
+                <div data-index="1" class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-tree text-4xl text-primary-color mb-4">
+                    </i>
+                    <h3 class="text-2xl font-bold">
+                        Árboles salvados
+                    </h3>
+                    <p class="text-xl mt-2">
+                        ~2,500 Árboles
+                    </p>
+                </div>
+                <div data-index="2" class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-globe text-4xl text-primary-color mb-4">
+                    </i>
+                    <h3 class="text-2xl font-bold">
+                        CO2 Reducido
+                    </h3>
+                    <p class="text-xl mt-2">
+                        ~5,000 Tons
+                    </p>
+                </div>
+                <div data-index="3" class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
+                    <i class="fas fa-bolt text-4xl text-primary-color mb-4">
+                    </i>
+                    <h3 class="text-2xl font-bold">
+                        Sistemas instalados
+                    </h3>
+                    <p class="text-xl mt-2">
+                        ~1,000
+                    </p>
+                </div>
+            </div>
+            <img class="mx-auto w-full lg:w-1/2 mt-[6rem]" src="./static/map.svg" alt="">
+        </div>
+    </section>
+    <!-- The brands we work with -->
     <section class="bg-colSec-1 text-white py-20" id="brands">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12">
-                Our Brands
+                Tecnología de Primera, Marcas Líderes
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 bg-colSec-1">
                 <div data-index="0" class="box md:bg-accSec-1 sm:bg-colSec-1 p-4 md:rounded-lg md:shadow-lg">
@@ -258,54 +407,80 @@
             </div>
         </div>
     </section>
-    <section class="bg-colSec-2 py-20" id="contact">
+    <!-- Contact info sec -->
+    <section class="bg-colSec-3 py-20" id="contact">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold">
                 Contactanos
             </h2>
-            <div class="container flex items-center justify-center">
-                <a href="#"
+            <div class="container flex items-center justify-center my-4">
+                <a href="https://instagram.com/lumileds_tepa/"
                     class="bg-colSec-1 ig-icon mx-[5px] flex items-center justify-center text-white rounded-lg text-2xl w-10 h-10"
                     title="Join us on Facebook">
                     <i class="fab fa-instagram"></i></a>
-                <a href="#"
+                <a href="https://facebook.com/lumiledstepa/"
                     class="bg-colSec-1 fb-icon mx-[5px] flex items-center justify-center text-white rounded-lg text-2xl w-10 h-10"
                     title="Join us on Facebook">
                     <i class="fab fa-facebook-f"></i></a>
-                <a href="#"
+                <a href="https://wa.me/523787068919?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20energ%C3%ADa%20solar.%20Vi%20su%20informaci%C3%B3n%20de%20contacto%20en%20su%20sitio%20web.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F%20Gracias."
                     class="bg-colSec-1 ws-icon mx-[5px] flex items-center justify-center text-white rounded-lg text-2xl w-10 h-10"
                     title="Join us on Facebook">
                     <i class="fab fa-whatsapp"></i></a>
             </div>
+            <!-- <div class=""></div> -->
+            <a href="https://maps.app.goo.gl/ym6Cb5RwAwrV2Lxx8" target="_blank"
+                class="mx-auto flex justify-center items-center mb-4">
+                <div class="loader"></div>
+                <!-- Link Text -->
+                <span>Calle Morelos 605, Calzada La Gloria, 47670 Tepatitlán de Morelos, Jal.</span>
+            </a>
             <p class="text-xl mb-8">
-                We'd love to hear from you! Reach out to us for any inquiries or support.
+                ¡Nos encantaría saber de usted! Comuníquese con nosotros para cualquier consulta o soporte.
             </p>
-            <form class="max-w-lg mx-auto text-white bg-accSec-1 p-8 rounded-lg shadow-lg fade-in">
+
+            <form class="max-w-lg mx-auto text-white bg-accSec-1 p-8 rounded-lg shadow-lg fade-in"
+                action="https://formspree.io/f/xeoejpov" method="POST" id="contact-form">
                 <div class="mb-4">
                     <label class="block text-left text-color-colTxt" for="name">
                         Nombre
                     </label>
                     <input class="text-black bg-colSec-3 w-full px-4 py-2 rounded-lg focus:outline-none" id="name"
-                        type="text" />
+                        name="name" type="text" />
                 </div>
+                <div class="mb-4">
+                    <label class="block text-left text-color-colTxt" for="email">
+                        Telefono
+                    </label>
+                    <input type="tel" class="text-black bg-colSec-3 w-full px-4 py-2 rounded-lg focus:outline-none"
+                        name="tel" />
+                </div>
+
                 <div class="mb-4">
                     <label class="block text-left text-color-colTxt" for="email">
                         Email
                     </label>
                     <input class="text-black bg-colSec-3 w-full px-4 py-2 rounded-lg focus:outline-none" id="email"
-                        type="email" />
+                        name="email" type="email" />
                 </div>
                 <div class="mb-4">
                     <label class="block text-left text-color-colTxt" for="message">
                         Mensaje
                     </label>
-                    <textarea class="text-black bg-colSec-3 w-full px-4 py-2 rounded-lg focus:outline-none"
-                        id="message"></textarea>
+                    <textarea class="text-black bg-colSec-3 w-full px-4 py-2 rounded-lg focus:outline-none" id="message"
+                        name="message"></textarea>
                 </div>
-                <button
-                    class="bg-primary-color text-colTxt px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition duration-300"
+                <button id="submit-btn"
+                    class="relative bg-primary-color text-colTxt w-48 h-12 px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition-all duration-300"
                     type="submit">
-                    Enviar mensaje
+                    <span id="send-text" class="block text-center transition-opacity duration-300">Send
+                        message</span>
+                    <svg id="loading-spinner" class="hidden mx-auto animate-spin h-5 w-5" viewBox="0 0 30 30">
+                        <circle cx="15" cy="15" r="10" stroke="#ffffff" stroke-width="5" fill="none" />
+                        <path d="M15,5 A10,10 0 0,1 25,15" stroke="#37373D" stroke-width="5" fill="none" />
+                    </svg>
+                    <span id="checkmark" class="hidden text-center">✔</span>
+                    <span id="error" class="hidden text-center">✖</span>
+                    <span id="form-tooltip" class="tooltip">Hubo un problema!</span>
                 </button>
             </form>
         </div>
@@ -319,5 +494,8 @@
 <script src="./src/nav_menu.js"></script>
 <script src="./src/pop_elems.js"></script>
 <script src="./src/translation.js"></script>
+<script src="./src/form.js"></script>
+<script src="./src/projects.js"></script>
+<script src="./src/monitoring.js"></script>
 
 </html>

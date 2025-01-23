@@ -199,12 +199,12 @@ body {
     width: 100vw;
     --offset: 7rem;
     --fsize: 2rem;
-    background-image: url("https://group.met.com/media/mjmlu0xi/solar-energy.jpg?anchor=center&mode=crop&width=1000&rnd=133269055835230000&mode=max&upscale=false");
-    background-position: center;
+    /* background-image: url("https://group.met.com/media/mjmlu0xi/solar-energy.jpg?anchor=center&mode=crop&width=1000&rnd=133269055835230000&mode=max&upscale=false"); */
+    /* background-position: center;
     background-repeat: none;
-    background-size: cover;
+    background-size: cover; */
 
-    
+
     h2 {
         /* background-color: #ff0000; */
         position: absolute;
@@ -215,6 +215,7 @@ body {
         transform: translate(-50%);
         z-index: 102;
     }
+
     p {
         position: absolute;
         /* background-color: white; */
@@ -224,28 +225,105 @@ body {
         top: calc(var(--fsize) + var(--offset) + 0rem);
         z-index: 102;
     }
+
     @media (min-width: 640px) {
         p {
             width: 30vw;
             left: 35vw;
         }
     }
+
+    img, video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        /* z-index: 90; */
+        object-fit: cover;
+        object-position: center;
+        transition: all 500ms ease-in-out;
+    }
 }
+
 .gradient {
     width: 100vw;
     height: 20vh;
     position: absolute;
     z-index: 80;
 }
+
 .bottom {
     bottom: 0;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0) 10%, #1b1b1e);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #1b1b1e);
 }
+
 .top {
     top: 0;
     /* height: 40vw; */
-    background-image: linear-gradient(0deg, rgba(0,0,0,0), #1b1b1e 50%);
-    
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #1b1b1e 50%);
+
+}
+
+#project-desc {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #1b1b1e);
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    bottom: 0;
+    right: 0;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    z-index: 102;
+    text-align: right;
+    color: white;
+}
+
+.tooltip {
+    position: absolute;
+    width: max-content;
+    top: 100%;
+    /* Initially hidden above the container */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.6em 1em;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 3rem;
+    background: #e0e0e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    /* opacity: 1;
+    visibility: visible; */
+}
+
+/* Triangle arrow for the bubble tooltip */
+.tooltip::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    border-style: solid;
+    border-width: 0 8px 8px;
+    border-color: transparent transparent #e0e0e2;
+}
+
+@keyframes camera-move-1 {
+    0% { object-position: 50% 50%; }
+    100% { object-position: 65% 40%; }
+}
+
+@keyframes camera-move-2 {
+    0% { object-position: 50% 50%; }
+    100% { object-position: 35% 60%; }
+}
+
+@keyframes camera-move-3 {
+    0% { object-position: 50% 50%; }
+    100% { object-position: 70% 50%; }
 }
 
 
@@ -292,3 +370,65 @@ body {
         opacity: 0;
     }
 }
+
+
+.loader {
+    width: 20px;
+    height: 20px;
+    display: block;
+    /* margin: 10px 5px; */
+    margin-bottom: 15px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .loader::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 50% 0;
+    border: 6px solid #D72638;
+    transform: rotate(45deg) translate(0, 0);
+    box-sizing: border-box;
+    animation: animMarker 0.4s ease-in-out infinite alternate;
+  }
+  
+  .loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 150%;
+    width: 14px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: animShadow 0.4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes animMarker {
+    0% {
+      transform: rotate(45deg) translate(3px, 3px);
+    }
+  
+    100% {
+      transform: rotate(45deg) translate(-3px, -3px);
+    }
+  }
+  
+  @keyframes animShadow {
+    0% {
+      transform: scale(0.5);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+      
