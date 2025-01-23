@@ -90,16 +90,16 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         validatePhoneNumber(data.tel);
         validateEmail(data.email);
         validateString(data.message, 10);
-        // const response = await fetch(form.action, {
-        //     method: form.method,
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data),
-        // });
+        const response = await fetch(form.action, {
+            method: form.method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
 
-        if (Math.random() > 0.5) {
+        if (response.ok) {
             success(form);
         } else {
-            msg = "Hubo un problema!<br> Intente de nuevo en unas horas";
+            msg = "Hubo un problema!<br> Intente de nuevo en unas horas<br>O contactenos por Whatsapp";
             error_form(msg);
         }
     } catch (error) {

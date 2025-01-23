@@ -102,7 +102,7 @@
     </header>
     <section class="py-20 flex relative items-center justify-center h-screen" id="hero">
         <video autoplay muted loop playsinline style="width: 100vw;height: 100vh;object-fit: cover;">
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            <source src="./static/main_sequence.mp4"
                 type="video/mp4">
         </video>
         <div id="sticky-logo">
@@ -167,6 +167,12 @@
         <!-- <p class="bg-secondary-color"></p> -->
         <div class="gradient bottom"></div>
         <div class="gradient top"></div>
+        <div id="project-desc"></div>
+        <img id="project-img" class="" src="" alt="" draggable="false">
+        <video id="project-vid" class="hidden" autoplay muted draggable="false">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </section>
     <section class="bg-colSec-1 text-white py-20" id="estimation">
         <div class="container mx-auto text-center">
@@ -263,22 +269,22 @@
             <h2 class="text-3xl font-bold">
                 Contactanos
             </h2>
-            <div class="container flex items-center justify-center">
-                <a href="#"
+            <div class="container flex items-center justify-center my-4">
+                <a href="https://instagram.com/lumileds_tepa/"
                     class="bg-colSec-1 ig-icon mx-[5px] flex items-center justify-center text-white rounded-lg text-2xl w-10 h-10"
                     title="Join us on Facebook">
                     <i class="fab fa-instagram"></i></a>
-                <a href="#"
+                <a href="https://facebook.com/lumiledstepa/"
                     class="bg-colSec-1 fb-icon mx-[5px] flex items-center justify-center text-white rounded-lg text-2xl w-10 h-10"
                     title="Join us on Facebook">
                     <i class="fab fa-facebook-f"></i></a>
-                <a href="#"
+                <a href="https://wa.me/523787068919?text=%C2%A1Hola%21%20Estoy%20interesado%2Fa%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20energ%C3%ADa%20solar.%20Vi%20su%20informaci%C3%B3n%20de%20contacto%20en%20su%20sitio%20web.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F%20Gracias."
                     class="bg-colSec-1 ws-icon mx-[5px] flex items-center justify-center text-white rounded-lg text-2xl w-10 h-10"
                     title="Join us on Facebook">
                     <i class="fab fa-whatsapp"></i></a>
             </div>
             <p class="text-xl mb-8">
-                We'd love to hear from you! Reach out to us for any inquiries or support.
+                ¡Nos encantaría saber de usted! Comuníquese con nosotros para cualquier consulta o soporte.
             </p>
             <form class="max-w-lg mx-auto text-white bg-accSec-1 p-8 rounded-lg shadow-lg fade-in"
                 action="https://formspree.io/f/xeoejpov" method="POST" id="contact-form">
@@ -338,5 +344,5 @@
 <script src="./src/pop_elems.js"></script>
 <script src="./src/translation.js"></script>
 <script src="./src/form.js"></script>
-
+<script src="./src/projects.js"></script>
 </html>

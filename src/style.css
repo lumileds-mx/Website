@@ -199,10 +199,10 @@ body {
     width: 100vw;
     --offset: 7rem;
     --fsize: 2rem;
-    background-image: url("https://group.met.com/media/mjmlu0xi/solar-energy.jpg?anchor=center&mode=crop&width=1000&rnd=133269055835230000&mode=max&upscale=false");
-    background-position: center;
+    /* background-image: url("https://group.met.com/media/mjmlu0xi/solar-energy.jpg?anchor=center&mode=crop&width=1000&rnd=133269055835230000&mode=max&upscale=false"); */
+    /* background-position: center;
     background-repeat: none;
-    background-size: cover;
+    background-size: cover; */
 
 
     h2 {
@@ -232,6 +232,18 @@ body {
             left: 35vw;
         }
     }
+
+    img, video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        /* z-index: 90; */
+        object-fit: cover;
+        /* object-position: center; Initial position */
+        transition: all 300ms ease-out;
+    }
 }
 
 .gradient {
@@ -251,6 +263,18 @@ body {
     /* height: 40vw; */
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), #1b1b1e 50%);
 
+}
+
+#project-desc {
+    background-color: #989C99;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    z-index: 102;
 }
 
 .tooltip {
@@ -283,6 +307,21 @@ body {
     border-style: solid;
     border-width: 0 8px 8px;
     border-color: transparent transparent #e0e0e2;
+}
+
+@keyframes camera-move-1 {
+    0% { object-position: 50% 50%; }
+    100% { object-position: 65% 40%; }
+}
+
+@keyframes camera-move-2 {
+    0% { object-position: 50% 50%; }
+    100% { object-position: 45% 60%; }
+}
+
+@keyframes camera-move-3 {
+    0% { object-position: 50% 50%; }
+    100% { object-position: 65% 50%; }
 }
 
 
