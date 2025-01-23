@@ -94,12 +94,17 @@ async function displayProject() {
 }
 
 function handleSwipe(left) {
+    if(abortController.signal.aborted) return;
+    abortController.abort();
     if (left) {
         currentIndex = (currentIndex + 1) % projects.length;
     } else {
-        currentIndex = (currentIndex - 1) % projects.length;
+        if (currentIndex == 0) {
+            currentIndex = projects.length - 1;
+        } else {
+            currentIndex = (currentIndex - 1) % projects.length;
+        }
     }
-    abortController.abort();
     abortController = new AbortController();
 }
 
