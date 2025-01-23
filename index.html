@@ -175,8 +175,74 @@
         </div>
         <!-- <div class="gradient bottom-0" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #e0e0e2);"></div> -->
     </section>
+    <!-- Res and Comm -->
+    <section class="bg-colSec-3 py-20" id="solar-systems">
+        <div class="container mx-auto px-4">
+            <!-- Section Heading -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold mb-4">
+                    Solar PV Systems for Every Need
+                </h1>
+                <p class="text-lg">
+                    We design and install solar solutions for both residential and commercial properties, ensuring maximum
+                    efficiency and sustainability.
+                </p>
+            </div>
+    
+            <!-- Split Layout -->
+            <div class="flex flex-col lg:flex-row items-center gap-8">
+                <!-- Residential System -->
+                <div class="lg:w-1/2 w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[40dvh] lg:h-[50dvh]">
+                        <img src="./static/projects/House01/0001.jpg" alt="Residential Solar PV System"
+                            class="w-full h-full object-cover obje" />
+                        <div class="absolute top-0 left-0 right-0 bg-black bg-opacity-30 flex flex-row items-center justify-center">
+                            <!-- <img src="./static/residential.png" alt="Residential Solar PV System icon"
+                            class="w-1/5 opacity-100" /> -->
+                            <h2 class="text-3xl font-bold text-white py-4">Residential Systems</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-lg mb-4">
+                            Tailored solar solutions for homes, designed to reduce energy bills and increase energy
+                            independence.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Customized system design</li>
+                            <li>Seamless integration with your home</li>
+                            <li>24/7 monitoring and support</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Commercial System -->
+                <div class="lg:w-1/2 w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative h-[40dvh] lg:h-[50dvh]">
+                        <img src="./static/projects/SMC/0001.jpg" alt="Commercial Solar PV System"
+                            class="w-full h-full object-cover" />
+                        <div class="absolute top-0 left-0 right-0 bg-black bg-opacity-30 flex flex-row items-center justify-center">
+                            <!-- <img src="./static/commercial.png" alt="Residential Solar PV System icon"
+                            class="w-1/5 opacity-100" /> -->
+                            <h2 class="text-3xl font-bold text-white py-4">Commercial Systems</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-lg mb-4">
+                            Scalable solar solutions for businesses, helping you cut operational costs and achieve
+                            sustainability goals.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>High-efficiency panels</li>
+                            <li>Energy storage options</li>
+                            <li>Dedicated project management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- 24/7 monitor -->
-    <section class="bg-colSec-3 py-20" id="explain">
+    <section class="bg-colSec-3 py-20" id="monitor">
         <div class="container mx-auto px-4 py-16">
             <div class="flex flex-col lg:flex-row items-center justify-between">
                 <div class="lg:w-1/2 mb-8 lg:mb-0 px-6">
@@ -193,14 +259,6 @@
                 </div>
                 <div class="relative w-3/4 lg:w-1/2 h-[60dvw] md:h-[55dvw] lg:h-[35dvw] flex justify-center overflow-hidden lg:mx-24 cursor-pointer"
                     id="image-carousel">
-                    <!-- <img alt="Smartphone displaying monitoring features" class="w-80" height="800"
-                        src="./static/mock_sma.png"
-                        width="400"
-                        style="position: absolute; top: 0; left: 0; height: auto; width: 100%;"/> -->
-                    <!-- <img alt="Smartphone displaying monitoring features" class="w-80" height="800"
-                        src="./static/mock_fronius.png"
-                        width="400"
-                        style="position: absolute; top: 0; left: 0; height: auto; width: 100%;"/> -->
                     <img alt="Slide 1" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-100"
                         src="./static/mock_huawei.png" />
                     <img alt="Slide 2" class="absolute top-0 left-0 w-full h-auto transition-all duration-500 opacity-0"
@@ -248,9 +306,9 @@
     </section>
     <!-- Projects -->
     <section class="bg-black py-4" id="projects">
-        <h2 class="text-3xl text-white font-bold text-center mb-12">
+        <!-- <h2 class="text-3xl text-white font-bold text-center mb-12 bg-black bg-opacity-30">
             Conocenos
-        </h2>
+        </h2> -->
         <!-- <p class="bg-secondary-color"></p> -->
         <!-- <div class="gradient bottom"></div>
         <div class="gradient top"></div> -->
@@ -277,13 +335,13 @@
         </div>
     </section>
     <!-- Our contribution to the world -->
-    <section class="bg-colSec-2 py-20" id="stats">
+    <section class="bg-colSec-3 py-20" id="stats">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-12">
                 Our Impact
             </h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <div data-index="0" , class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                <div data-index="0" , class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
                     <i class="fas fa-solar-panel text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
@@ -293,7 +351,7 @@
                         10,000 MWh
                     </p>
                 </div>
-                <div data-index="1" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                <div data-index="1" class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
                     <i class="fas fa-tree text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
@@ -303,7 +361,7 @@
                         50,000 Trees
                     </p>
                 </div>
-                <div data-index="2" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                <div data-index="2" class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
                     <i class="fas fa-globe text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
@@ -313,7 +371,7 @@
                         25,000 Tons
                     </p>
                 </div>
-                <div data-index="3" class="box bg-colSec-2 md:bg-colSec-3 p-8 md:rounded-lg md:shadow-lg">
+                <div data-index="3" class="box bg-colSec-3 md:bg-white p-8 md:rounded-lg md:shadow-lg">
                     <i class="fas fa-bolt text-4xl text-primary-color mb-4">
                     </i>
                     <h3 class="text-2xl font-bold">
@@ -355,7 +413,7 @@
         </div>
     </section>
     <!-- Contact info sec -->
-    <section class="bg-colSec-2 py-20" id="contact">
+    <section class="bg-colSec-3 py-20" id="contact">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold">
                 Contactanos
