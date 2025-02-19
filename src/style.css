@@ -5,6 +5,7 @@ body {
 }
 
 #st-bar-header {
+    /* background-color: rgba(27, 27, 30, 0.5); */
     background-color: rgba(27, 27, 30, 0.5);
     border-bottom: 2px solid #E5E7EB;
     position: fixed;
@@ -119,8 +120,9 @@ body {
 }
 
 .svg-tr-style-0 {
-    fill: #F9BA2D;
-    fill-opacity: 0.5;
+    /* fill: #F9BA2D; */
+    fill: #ffffff;
+    fill-opacity: 0.8;
     stroke: #ffffff;
     stroke-width: 0;
     stroke-dasharray: none;
@@ -128,8 +130,9 @@ body {
 }
 
 .svg-tr-style-1 {
-    fill: #989C99;
-    fill-opacity: 0.5;
+    /* fill: #989C99; */
+    fill: #ffffff;
+    fill-opacity: 0.8;
     stroke: #ffffff;
     stroke-width: 0;
     stroke-dasharray: none;
@@ -137,7 +140,8 @@ body {
 }
 
 .svg-fix-style-0 {
-    fill: #F9BA2D;
+    /* fill: #F9BA2D; */
+    fill: #ffffff;
     fill-opacity: 1;
     stroke: #ffffff;
     stroke-width: 0;
@@ -146,7 +150,8 @@ body {
 }
 
 .svg-fix-style-1 {
-    fill: #989C99;
+    /* fill: #989C99; */
+    fill: #ffffff;
     fill-opacity: 1;
     stroke: #ffffff;
     stroke-width: 0;
@@ -431,4 +436,24 @@ body {
       transform: scale(1);
     }
   }
-      
+
+
+.whatsappfx { 
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    transition: all ease-in-out 200ms;
+}
+
+.whatsappfx:hover {
+    scale: 1.1;
+}
+
+.whatsappfx:active {
+    scale: 0.8;
+}

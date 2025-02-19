@@ -90,7 +90,7 @@ window.addEventListener('scroll', () => {
             targetLogo.style.opacity = 1;
             targetName.style.opacity = 1;
             document.getElementById("sticky-logo").style.display = "none";
-            document.getElementById("st-bar-header").style.backgroundColor = "rgb(27, 27, 30)";
+            document.getElementById("st-bar-header").style.backgroundColor = "rgb(249, 186, 45)";
             statusCenter = true;
         } else {
             progress = Math.min(scrollY / targetScroll, 1.0);
